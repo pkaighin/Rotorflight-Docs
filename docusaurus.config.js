@@ -18,7 +18,6 @@ const config = {
   baseUrl: '/',
   projectName: 'pkaighin.github.io',
   organizationName: 'pkaighin',
-  DEPLOYMENT_BRANCH: 'Tuning_presets',
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
