@@ -16,8 +16,8 @@ const config = {
 
   url: 'https://github.com/', // Your website URL
   baseUrl: '/',
-  projectName: 'pkaig.github.io',
-  organizationName: 'pkaig',
+  projectName: 'pkaighin.github.io',
+  organizationName: 'pkaighin',
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
@@ -59,14 +59,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/pkaig/Rotorflight-Docs/tree/main',
+            'https://github.com/pkaighin/Rotorflight-Docs/tree/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/pkaig/Rotorflight-Docs/tree/main',
+            'https://github.com/pkaighin/Rotorflight-Docs/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
