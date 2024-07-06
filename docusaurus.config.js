@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/rffavicon.ico',
 
   url: 'https://github.com/', // Your website URL
-  baseUrl: '/',
+  baseUrl: '/Rotorflight-Docs/',
   projectName: 'pkaighin.github.io',
   organizationName: 'pkaighin',
   trailingSlash: false,
