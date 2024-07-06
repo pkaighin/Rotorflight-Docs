@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrotorflight_docs=self.webpackChunkrotorflight_docs||[]).push([[5266],{69064:o=>{o.exports=JSON.parse('{"blogBasePath":"/Rotorflight-Docs/announcement","blogTitle":"Blog"}')}}]);
