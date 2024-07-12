@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrotorflight_docs=self.webpackChunkrotorflight_docs||[]).push([[2015],{62517:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/Rotorflight-Docs/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":13,"previousPage":"/Rotorflight-Docs/blog","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
