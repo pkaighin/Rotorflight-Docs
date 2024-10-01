@@ -16,8 +16,8 @@ const config = {
 
   url: 'https://github.com/', // Your website URL
   baseUrl: '/',
-  projectName: 'pkaig.github.io',
-  organizationName: 'pkaig',
+  projectName: 'pkaighin.github.io',
+  organizationName: 'pkaighin',
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
