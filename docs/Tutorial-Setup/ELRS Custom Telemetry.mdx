@@ -1,0 +1,91 @@
+---
+sidebar_position: 75
+---
+
+import Tabs     from '@theme/Tabs';
+import TabItem  from '@theme/TabItem';
+import styles   from './styles.module.css';
+
+import EdgeTX   from './img/edgetx-logo.png';
+import ETHOS    from './img/ethos-logo.png';
+
+Many modern protocols are capable of returning Flight Controller values back to the Transmitter via telemetry. 
+
+## Why Custom Telemetry
+The ELRS protocol has a limited array of parameters that can be transferred. Many of these are not very valuable for a helicopter (as opposed to drones). In Rotorflight 2.0 this was achieved by ELRS Telemetry Re-use however, this was also limited. 
+
+Custom telemetry has been implemented for ELRS in Rotorflight 2.1. This allows many more sensors that was previously possible with CRSF. Currently there are over 100 sensors to choose from, and a maximum of 40 sensors can be used in total. With the ELRS configurable telemetry ratio, the sensors can be updated up to 20 times per second. Note: ‘Telemetry Reuse’ (from Rotorflight 2) has been removed as it is no longer required.
+
+:::info Please choose to suit your Radio - EdgeTX or ETHOS
+<Tabs groupId="operating-systems">
+  <TabItem value="EdgeTX" label="EdgeTX">
+
+## EdgeTX
+<img src={EdgeTX} alt="EdgeTX" width="15%"/> 
+
+
+### 1. Enable CRSF custom telemetry
+To set up ELRS custom telemetry:  
+* Enable telemetry (This enables telemetry for all receiver types)  
+* CRSF Custom Telemetry (This enables the ELRS custom)  
+This is located under the Receiver tab in Rotorflight Configurator.  
+
+![Telemetry Tab](./img/telemetry-1.png)
+
+### 2. Set ELRS Packet rate
+Set ‘Telemetry Rate’ to match the ‘Packet Rate’ you’ve set for ELRS (500 in the example below). Then set ‘Telemetry Ratio’ to match the ‘Telem Ratio’ you’ve set in ELRS (32 in the example below). The screenshot below is from Express LRS Lua script’s main screen  
+
+![Telemetry Tab](./img/telemetry-2.png)
+
+### 3. Choose Sensors
+Next, select the sensors you want enabled. Each added sensor can be dragged up and down to change their order. You can freely choose whatever parameters you wish to be visible on your transmitter.   
+
+![Telemetry Tab](./img/telemetry-3.png)
+
+### 4. Download telemetry LUA Script
+NOTE! Lua script is required for Custom Telemetry
+Custom telemetry requires the radio to run a telemetry Lua script in the background. Download the Lua script from here. You need to install all the Lua scripts coming with the release, and then enable rf2tlm.lua as a ‘Custom Script’ in your EdgeTx model. The steps below explain how to to this and discover the newly added sensors on your EdgeTx radio. It 
+
+Download the Lua scripts (the file should look something like below)  
+
+![Telemetry Tab](./img/telemetry-4.png)
+
+### 5. Add LUA to SD card
+2. Copy the ‘Script’ folder from the zip file into your EdgeTx radio’s SD card (root directory). There will be a Scripts folder already in your SD card. You can safely overwrite any existing files. (Note: As with any upgrades, ensure you have already backed up your SD card in case anything goes wrong)
+Contents of the zip file:  
+
+![Telemetry Tab](./img/telemetry-5.png)
+
+Contents of your SD card should look something like this:  
+![Telemetry Tab](./img/telemetry-6.png)
+
+### 6. Enable Custom Scripts on Tx
+* From the **Model Setup** tab select **Enabled Features** and enable **Custom Scripts**.  
+
+***If this is not visible on your radio you will have to Update your Version of EdgeTX.***  [Update your EdgeTX firmware](https://edgetx.org/getedgetx/)  
+
+![Telemetry Tab](./img/telemetry-7.png)
+
+### 7. Load Custom Script 
+Still on your EdgeTx radio, navigate to Model settings -> Custom Scripts page and create a new custom script as below for rf2tlm.lua. You can give it any name you like.  
+
+![Telemetry Tab](./img/telemetry-8.png)
+
+### 8. Discover telemetry 
+Still on your EdgeTx radio, navigate to Model settings -> Custom Scripts page and create a new custom script as below for rf2tlm.lua. You can give it any name you like.  
+
+![Telemetry Tab](./img/telemetry-9.png)
+
+  </TabItem>
+  <TabItem value="ETHOS" label="ETHOS">
+  ## ETHOS
+  <img src={ETHOS} alt="ETHOS" width="40%" c/>
+### 1. Enable CRSF custom telemetry
+To set up ELRS custom telemetry, first enable telemetry and CRSF Custom Telemetry for telemetry stream to be sent to your radio. This is located under the Receiver tab in Rotorflight Configurator.  
+
+![Telemetry Tab](./img/telemetry-1.png)
+
+  </TabItem>
+</Tabs>
+
+:::
